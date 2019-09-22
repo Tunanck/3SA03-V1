@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 class CharacterCard extends React.Component {
+
     state = {
         active: false
     }
@@ -15,9 +16,11 @@ class CharacterCard extends React.Component {
     render() {
         let activeClass = this.state.active ? 'activeCard' : '';
         let className = `card ${activeClass}`
+
         return (
-            <div className={className} onClick={this.activate}>
+            <div className={className} onClick={this.activate} >
                 {this.props.value}
+
             </div>
         )
     }
