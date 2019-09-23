@@ -1,0 +1,14 @@
+
+.que{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self:center;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

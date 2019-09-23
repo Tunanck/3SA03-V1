@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+
 export default class Content extends Component{
     constructor(){
         super()
@@ -7,22 +8,15 @@ export default class Content extends Component{
         }
     }
 
-    addnum=()=>{
+    addNum=()=>{
         this.setState({count:this.state.count+1})
     }
+
     render(){
         return(
-            <div>
-                <button onClick={this.addnum}>num {this.state.count} </button>
+            <div className="card">
+                <button onClick={this.addNum}>num {this.state.count}</button>
             </div>
         )
     }
 }
-// // export default function Content(props){
-// //     return(
-// //         <div>
-// //             {props.name}
-// //             <button>ok</button>
-// //         </div>
-// //     );
-// }

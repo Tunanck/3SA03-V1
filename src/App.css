@@ -1,47 +1,50 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .card {
   display: inline-block;
   text-align: center;
-  width: 3em;
-  font-size: 2em;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  margin: 1em;
-  user-select: none;
+  margin: 0.5em;
+  color: rgb(87, 9, 151);
+  font-family: sans-serif;
+  border-radius: 10px;
+  border: 10px solid rgb(189, 126, 8);
+  padding: 1em 2em;
+   }
+ .activeCard {
+  font-family: sans-serif;
+  border-radius: 10px;
+  border: 5px solid rgb(48, 4, 243);
+  text-align: center;
+  color : rgb(0, 255, 21);
+  background :rgb(219, 235, 235);
+  border: 10px solid blue;
+ } 
+ .css{
+ background: rgb(239, 243, 0);
+text-align: center;
+border: 3px;
+font-family: sans-serif;
+background: transparent;
+padding: 1em 1em;
  }
- 
-.activeCard {
-  color: red;
-  background: pink;
- }
+.qu{
+    text-align: center;
+    color : rgb(64, 5, 160);
+    background :rgb(255, 153, 0);
+    border: 10px solid rgb(235, 218, 72);
+    font-family: sans-serif;
+    border-radius: 3px;
+    font-family: sans-serif;
+    display: inline-block;
+    font-size: 5em;
+   } 
+   .itemm{
+    text-align-last: center;
+   text-align: center;
+   color : darkblue;
+   background : rgb(248, 252, 4);
+   border: 3px solid blue;
+   font-family: sans-serif;
+   border-radius: 3px;
+   font-size: 2em;
+  }
+   
