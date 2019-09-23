@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 //import ReactDOM from 'react-dom'
-import './Start.css';
+import './Head.css';
 // import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 //import App from './App'
 import './App.css';
-function Start() {
+function Head() {
   return (
     <div className="que">
       <div className="row">
@@ -13,4 +13,4 @@ function Start() {
     </div>
   );
 }
-export default Start;
+export default Head;

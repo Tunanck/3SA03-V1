@@ -1,10 +1,10 @@
 import React from 'react';
 import Event from './Event';
 import Check from './Check';
-import './App.css';
-import Start from './Start'
+import Head from './Head'
 import _ from 'lodash';
-import profile from './profile.jpg'
+import pic from './pic.jpg'
+import './App.css';
 
 const message = 'HOSPITAL'
 const prepareStateFromWord = (given_word) => {
@@ -46,7 +46,7 @@ class App extends React.Component {
     console.log(this.state.show) // check
   }
   reset = () => {
-    this.setState({completed: false,check: this.state.check + 1 , guess: [],counter: this.state.counter + 1})
+    this.setState({ completed: false, check: this.state.check + 1, guess: [], counter: this.state.counter + 1 })
   }
   give_ups = () => {
     this.setState({
@@ -54,23 +54,23 @@ class App extends React.Component {
     })
   }
 
-  setCom=()=>{
-    this.setState({completed: true, })
+  setCom = () => {
+    this.setState({ completed: true, })
   }
 
   render() {
     let showwin = this.state.completed === false ? '' : <h3>Completed!!!!</h3>;
-    let check = this.state.completed === false ?'' : '';
+    let check = this.state.completed === false ? '' : '';
     let gameover = this.state.counter > 3 ? "Game Over" : "Counter : " + this.state.counter;
 
     return (
       <div className="css">
         <div>
-          <Start />
+          <Head />
         </div>
         <div className="first">
           <div className="second">
-            <div className="bgpic"><img className="profile" src={profile}></img></div>
+            <div className="bgpic"><img className="pic" src={pic}></img></div>
             <div>
               {
                 Array.from(this.state.chars).map((x, y) => (
@@ -83,28 +83,28 @@ class App extends React.Component {
                   />
                 ))
               }
-              
-                <h3>You can play 3 Round</h3>
-                {
-                  Array.from(this.state.guess).map((x, y) => (
-                    <Event
-                      value={x}
-                      key={y}
-                      click={this.click}
-                    />
-                  ))
-                }
-                <div>
 
-                  <Check check_count={this.state.counter} />
-                </div>
-                <div className="re">
-                {showwin}
-                  {check}
-     
-                </div>
+              <h3>You can play 3 Round</h3>
+              {
+                Array.from(this.state.guess).map((x, y) => (
+                  <Event
+                    value={x}
+                    key={y}
+                    click={this.click}
+                  />
+                ))
+              }
+              <div>
+
+                <Check check_count={this.state.counter} />
               </div>
-              <button onClick={this.reset}><h1> Play Again</h1></button>;
+              <div className="re">
+                {showwin}
+                {check}
+
+              </div>
+            </div>
+            <button onClick={this.reset}><h1> Play Again</h1></button>;
             <div className="center-box">
               <div className="center-text">
                 <h1 className="text">3SA03 React Web Application </h1>
@@ -118,13 +118,11 @@ class App extends React.Component {
                 </div>
               </div>
             </div>
-
-            
-            </div>
-        
           </div>
+
         </div>
-      
+      </div>
+
     )
   }
 }
