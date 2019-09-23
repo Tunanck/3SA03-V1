@@ -7,11 +7,9 @@ export default class Content extends Component{
             count:0
         }
     }
-
     addNum=()=>{
         this.setState({count:this.state.count+1})
     }
-
     render(){
         return(
             <div className="card">

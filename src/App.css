@@ -6,9 +6,16 @@
   color: rgb(87, 9, 151);
   font-family: sans-serif;
   border-radius: 10px;
-  border: 10px solid rgb(189, 126, 8);
+  border: 7px solid rgb(189, 126, 8);
   padding: 1em 2em;
    }
+   .bgpic{
+    font-family: sans-serif;
+    border-radius: 10px;
+    border: 10px solid rgb(186, 5, 231);
+    text-align: center;
+    background :rgb(23, 255, 255);
+   } 
  .activeCard {
   font-family: sans-serif;
   border-radius: 10px;
@@ -16,7 +23,6 @@
   text-align: center;
   color : rgb(0, 255, 21);
   background :rgb(219, 235, 235);
-  border: 10px solid blue;
  } 
  .css{
  background: rgb(239, 243, 0);
@@ -37,12 +43,10 @@ padding: 1em 1em;
     display: inline-block;
     font-size: 5em;
    } 
-   .itemm{
+   .re{
     text-align-last: center;
    text-align: center;
    color : darkblue;
-   background : rgb(248, 252, 4);
-   border: 3px solid blue;
    font-family: sans-serif;
    border-radius: 3px;
    font-size: 2em;

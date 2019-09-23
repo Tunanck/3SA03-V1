@@ -46,7 +46,7 @@ class App extends React.Component {
     console.log(this.state.show) // check
   }
   reset = () => {
-    this.setState({ check: this.state.check + 1, completed: false })
+    this.setState({completed: false,check: this.state.check + 1 , guess: [],counter: this.state.counter + 1})
   }
   give_ups = () => {
     this.setState({
@@ -54,11 +54,14 @@ class App extends React.Component {
     })
   }
 
+  setCom=()=>{
+    this.setState({completed: true, })
+  }
+
   render() {
-    let check = this.state.completed === false ? '' : <button onClick={this.reset}><h1> Play Again</h1></button>;
-    let ans = this.state.completed === false ? '' : <h3>!!!!! </h3>;
-    let checks = this.state.completed === false ? '' : <h1> WINNER </h1>;
-    //let count_end = this.state.counter > 5 ? "Game Over" : "Counter : " + this.state.counter;
+    let showwin = this.state.completed === false ? '' : <h3>Completed!!!!</h3>;
+    let check = this.state.completed === false ?'' : '';
+    let gameover = this.state.counter > 3 ? "Game Over" : "Counter : " + this.state.counter;
 
     return (
       <div className="css">
@@ -67,7 +70,7 @@ class App extends React.Component {
         </div>
         <div className="first">
           <div className="second">
-            <div className="activeCard"><img className="profile" src={profile}></img></div>
+            <div className="bgpic"><img className="profile" src={profile}></img></div>
             <div>
               {
                 Array.from(this.state.chars).map((x, y) => (
@@ -75,8 +78,8 @@ class App extends React.Component {
                     value={x}
                     key={y}
                     click={this.click}
-                    number={this.state.counter}
                     check={this.state.check}
+                    counter={this.state.counter}
                   />
                 ))
               }
@@ -95,12 +98,13 @@ class App extends React.Component {
 
                   <Check check_count={this.state.counter} />
                 </div>
-                <div className="itemm">
+                <div className="re">
+                {showwin}
                   {check}
-                  {ans}
-                  {checks}
+     
                 </div>
               </div>
+              <button onClick={this.reset}><h1> Play Again</h1></button>;
             <div className="center-box">
               <div className="center-text">
                 <h1 className="text">3SA03 React Web Application </h1>
@@ -108,8 +112,8 @@ class App extends React.Component {
                   <div className="button-a">
                   </div>
                   <div className="box-myname">
-                    <h3 className="jan">{this.state.show === true ? '6035512079' : 'By Nichakan Jaisaksern'}</h3>
-                    <h3 className="jan">{this.state.show === true ? '6035512079' : '6035512079'}</h3>
+                    <h3>{this.state.show === true ? '6035512079' : 'By Nichakan Jaisaksern'}</h3>
+                    <h3>{this.state.show === true ? '6035512079' : '6035512079'}</h3>
                   </div>
                 </div>
               </div>
